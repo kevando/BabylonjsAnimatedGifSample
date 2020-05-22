@@ -42,7 +42,12 @@ imageProcessingPostProcess.imageProcessingConfiguration.colorGradingEnabled = tr
 imageProcessingPostProcess.imageProcessingConfiguration.colorGradingTexture = new ColorGradingTexture("./assets/lateSunset.3dl", engine);
 
 // Creates a Gif Texture (looks simple ;-))
-const gifTexture = new AnimatedGifTexture("assets/axe.gif", engine, () => {
+const gifTextureOG = new AnimatedGifTexture("assets/axe.gif", engine, () => {
+    engine.loadingScreen.hideLoadingUI();
+});
+
+// Attempting to render a Transparent GIF
+const gifTexture = new AnimatedGifTexture("assets/test_gif.gif", engine, () => {
     engine.loadingScreen.hideLoadingUI();
 });
 
